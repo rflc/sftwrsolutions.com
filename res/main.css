@@ -1,0 +1,390 @@
+.photo {
+width: 120px;
+box-shadow: inset 0 0 0 6px #2D2D2D;
+border-radius: 12px;
+}
+
+body {
+  color: #C4B1DD;
+  background-color: #000;
+  font-family: helvetica neue, arial, helvetica, freesans, liberation sans, numbus sans l, sans-serif;
+  font-weight: 300;
+  font-size: 1.3em;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 960px) minmax(0, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    " ... hdr ... "
+    " ... cma ... "
+    " ... cmb ... "
+    " cmc cmc cmc "
+    " cmd cmd cmd "
+    " cme cme cme "
+    " cmf cmf cmf "
+    " ... tch ... "
+    " ... ... flg ";
+}
+
+.hdr {
+
+    grid-area: hdr;
+    height: 20vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    " left right ";
+    align-items: center;
+}
+
+.logo
+{
+    grid-area: left;
+    width: 60px;
+    /*width: 60px;*/
+    /*height: 67.2px;*/
+}
+
+
+.hdr a {
+    grid-area: right;
+    justify-self: end;
+}
+
+.hdr a svg {
+    width: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: #2D2D2D;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+.a {
+  grid-area: cma;
+  height: 55vh
+}
+
+.a .scene {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas:
+    "ctr";
+}
+
+#iphone {
+    grid-area: ctr;
+    height: 95vh;
+    align-self: center;
+    margin-left: 34vw;
+}
+
+.b {
+  grid-area: cmb;
+}
+
+.b .scene {
+    display: grid;
+    margin-bottom: 20vh;
+}
+
+#srvr {
+    justify-start: start;
+    height: 70vh;
+}
+
+.c {
+    grid-area: cmc;
+    margin-bottom: 20vh;
+}
+
+.c .scene {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    " ctr ";
+}
+
+#ripd {
+    grid-area: ctr;
+    justify-self: end;
+    height: 100vh;
+}
+
+/* Third Scene */
+.d {
+  grid-area: cmd;
+  margin-bottom: 20vh;
+}
+
+.d .scene {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "left center right";
+}
+
+#leftWall, #rightWall {
+    height: 100vh;
+}
+
+#leftWall { 
+    grid-area: left;
+    justify-start: start;
+}
+
+#rightWall {
+    grid-area: right;
+    justify-self: end;
+}
+
+.E {
+    grid-area: cme;
+}
+
+.e {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 25vh 25vh 25vh 25vh;
+    grid-template-areas:
+    " a  a  a  .  . "
+    " .  b  .  c  . "
+    " d  .  e  .  f "
+    " .  g  .  h  . ";
+
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 10vh;
+}
+
+
+.e svg {
+    height: 60px;
+    
+}
+
+
+.e div:nth-of-type(1) {
+    grid-area: a;
+    align-self: start;
+    justify-self: start;
+}
+
+#stack>h2, #stack>p {
+    visibility: hidden;
+}
+
+#stack>h2 {
+    color: #EFAFAF;
+}
+
+#stack>p {
+    color: #938FCC;
+}
+
+.e div:nth-of-type(2) {
+    grid-area: b;
+}
+
+.e div:nth-of-type(3) {
+    grid-area: c;
+}
+
+.e div:nth-of-type(4) {
+    grid-area: d;
+}
+
+.e div:nth-of-type(5) {
+    grid-area: e;
+}
+
+.e div:nth-of-type(6) {
+    grid-area: f;
+}
+
+.e div:nth-of-type(7) {
+    grid-area: g;
+}
+
+.e div:nth-of-type(8) {
+    grid-area: h;
+}
+
+.f {
+    grid-area: cmf;
+}
+
+.f .scene {
+    height: 100vh;
+}
+
+.f svg {
+    height: 100vh;
+}
+
+.g {
+    grid-area: tch;
+    margin-bottom: 20vh;
+    margin-top: 20vh;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*
+.f p {
+    display: inline;
+    float: right;
+    margin-right: .5em;
+    font-size: 1.5em;
+}
+*/
+.g div {
+    /*z-index: 2;*/
+    position: fixed;
+}
+
+.g svg {
+    display: none;
+    z-index: 2;
+    width: 10em;
+    transform-origin: left;
+    transform: rotateY(48deg);
+    cursor: pointer;
+    border: dotted silver;
+}
+
+form {
+    /*z-index: 1;*/
+    position: fixed;
+    /*display: none;*/
+    visibility: visible;
+    /*transform: rotateY(48deg);*/
+    border: solid black;
+    border-radius: 8px;
+    width: 10em;
+    height: 3.6em;
+    background: blue;
+}
+
+/* Set height for text fields */
+textarea:focus, input:focus{
+    outline: none;
+}
+
+textarea {
+    visibility: hidden;
+    z-index: 1;
+    position: absolute;
+    left: 0; 
+    top: 0; 
+    right:0; 
+    bottom: 0;
+    margin: auto;
+    
+    /*display: none;*/
+    height: 100%;
+    width: 93.5%;
+    padding: 0.5 em;
+    /*outline: none;*/
+    /*border: none;*/
+    resize: none;
+}
+
+input {
+    /*visibility: hidden;*/
+    z-index: 1;
+    position: absolute;
+    left: -5%; 
+    top: 0; 
+    right:0; 
+    bottom: 0;
+    margin: auto;
+    /*display: none;*/
+    /*position:fixed;*/
+
+    /*border:none;*/
+    /*outline:none;*/
+    height:34px;
+    line-height:normal;  
+    font-size:25px;
+    width:260px;
+    font-weight:700;
+    color:#000000;
+    background:transparent;
+    text-align:left;
+}
+
+
+input, textarea {
+    line-height:normal;  
+    font-size: 1em;
+    font-weight: 400;
+    background: transparent;
+    text-align: left;
+}
+
+.h {
+    grid-area: flg;
+    justify-self: end;
+}
+
+.h svg {
+    width: 3em;
+}
+
+.camera {
+  display: block;
+  /* Duration */
+  height: 300vh;
+}
+
+.scene {
+  z-index: 0;
+  margin: auto;
+  position: sticky;
+  position: -webkit-sticky;
+  top:0;
+  height: 100vh; 
+  height: 100vh;
+}
+
+    .scene img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+.text-mask {
+
+  -webkit-background-clip: text;
+}
+
+.pitch {
+  position: relative;
+  z-index: 1;
+
+  height: 50%;
+
+  display: grid;
+}
+
+.pitch p {
+  z-index: 1;
+  margin: auto;
+  color: transparent !important;
+  font-weight: 900;
+  font-size: 6em;
+  /*display: inline;*/
+
+}
+
+.texture {
+
+  background-image: url('res/img/mask.jpg');
+  background-repeat: no-repeat;
+}
