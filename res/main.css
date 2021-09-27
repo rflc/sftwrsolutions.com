@@ -7,8 +7,6 @@
     grid-template-rows: 1fr;
     grid-template-areas:
     " ctr ";
-
-    border: dashed black;
 }
 
 .logo {
@@ -19,12 +17,10 @@
     grid-area: ctr;
    /* place-self: center;*/
 
-    border: dotted grey;
     display: grid;
 }
 
 .logo svg {
     margin: auto;
     width: 30em;
-    border: solid red
 }
