@@ -2,7 +2,7 @@ body {
     color:  #36454F;
     font-family: helvetica neue, arial, helvetica, freesans, liberation sans, numbus sans l, sans-serif;
     /*font-weight: 100;*/
-    font-size: 1.5vw;
+    font-size: clamp(.5rem, 2vw, 1rem);
 }
 
 .container {
@@ -10,10 +10,10 @@ body {
     height: 100vh;
 
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 700px /*960px*/) minmax(0, 1fr);
     grid-template-rows: 1fr;
     grid-template-areas:
-    " ctr ";
+    " ... ctr ... ";
 }
 
 .logo {
@@ -34,7 +34,7 @@ body {
     grid-area: svg;
     align-self: end;
     justify-self: center;
-    width: 35vw;
+    width: 80%;
 }
 
 .clip {
