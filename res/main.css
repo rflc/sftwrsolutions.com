@@ -1,3 +1,10 @@
+body {
+    color:  #36454F;
+    font-family: helvetica neue, arial, helvetica, freesans, liberation sans, numbus sans l, sans-serif;
+    font-weight: 100;
+    font-size: 1em;
+}
+
 .container {
     width:  100vw;
     height: 100vh;
@@ -18,9 +25,26 @@
    /* place-self: center;*/
 
     display: grid;
+    grid-template-areas:
+    " svg "
+    " dsc ";
 }
 
 .logo svg {
-    margin: auto;
-    width: 30em;
+    grid-area: svg;
+    align-self: end;
+    justify-self: center;
+    width: 35vw;
+}
+
+iframe {
+    pointer-events: none;
+    -webkit-clip-path: url(#sftwr);
+    clip-path: url(#sftwr);))
+}
+
+.logo h2 {
+    grid-area: dsc;
+    align-self: start;
+    justify-self: center;
 }
