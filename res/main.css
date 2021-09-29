@@ -37,10 +37,10 @@ body {
     width: 35vw;
 }
 
-iframe {
+img {
     pointer-events: none;
+    clip-path: url(#sftwr);
     -webkit-clip-path: url(#sftwr);
-    clip-path: url(#sftwr);))
 }
 
 .logo h2 {
