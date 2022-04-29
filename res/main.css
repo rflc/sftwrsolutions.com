@@ -30,7 +30,7 @@ body {
     " dsc ";
 }
 
-.logo svg {
+.logo img {
     grid-area: svg;
     align-self: end;
     justify-self: center;
